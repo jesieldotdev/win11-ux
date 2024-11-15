@@ -4,14 +4,24 @@ import SizeAvatars from "@/components/Avatar";
 import { HeaderWindow } from "@/components/Header";
 import { SideMenu } from "@/components/Menu";
 import SearchInput from "@/components/SearchInput";
+import styled from "@emotion/styled";
 
-import { User, AppWindow, Bluetooth, Brush, Gamepad2, Globe2, House, LayoutGrid, LucideIcon, Wifi, } from "lucide-react";
+import { User, AppWindow, Bluetooth, Brush, Gamepad2, Globe2, House, LayoutGrid, LucideIcon, Wifi, LaptopMinimal, Volume2, Bell, Power, HardDrive, } from "lucide-react";
 import React from "react";
+import { Container, LeftContainer, RightContainer } from "./style";
+import { CardItem } from "@/components/CardItem";
 
 export interface MenuItemsProps {
   name: string
   icon: LucideIcon
 }
+
+interface SystemMenuItemsProps {
+  title: string
+  description: string
+  icon: LucideIcon
+}
+
 
 export default function Home() {
 
@@ -56,6 +66,34 @@ export default function Home() {
     },
   ]
 
+  const systemMenuItems: SystemMenuItemsProps[] = [
+    {
+      title: 'Tela',
+      description: 'Monitores, brilho, luz noturna, perfil de exibição',
+      icon: LaptopMinimal
+    },
+    {
+      title: 'Som',
+      description: 'Níveis de volume, saída, entrada, dispositivos de som',
+      icon: Volume2
+    },
+    {
+      title: 'Notificações',
+      description: 'Alertas de aplicativos e do sistema, não incomodar',
+      icon: Bell
+    },
+    {
+      title: 'Energia e bateria',
+      description: 'Repouso, uso de bateria, economia de energia',
+      icon: Power
+    },
+    {
+      title: 'Armazenamento',
+      description: 'Espaço de armazenamento, unidades, regras de configuração',
+      icon: HardDrive
+    },
+  ]
+
   function handleSelectItem(e: React.MouseEvent<HTMLDivElement, MouseEvent>, name: string) {
     e.preventDefault()
     e.stopPropagation()
@@ -65,28 +103,36 @@ export default function Home() {
   return (
     <div>
       <HeaderWindow />
-      <div
-        style={{
-          backgroundImage: 'url(https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          backgroundBlendMode: 'overlay',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)' // Overlay para escurecer a imagem
-        }}
-        className="flex min-w-full h-screen p-6 gap-6 flex-col md:flex-row">
-        <div className="w-full md:w-1/4 gap-6 flex flex-col">
+      <Container
+        className="flex min-w-full h-screen p-6 gap-6 flex-col md:flex-row ">
+
+        <LeftContainer className="w-full md:w-1/4 gap-6  flex flex-col">
           <SizeAvatars />
           <SearchInput />
+
           <SideMenu
             selectedItem={selectedItem}
             handleSelectItem={handleSelectItem}
             items={menuItems} />
-        </div>
-        <div className="w-full md:w-3/4">
+        </LeftContainer>
+
+        <RightContainer className="w-full md:w-3/4 flex-col flex gap-2">
           <p className="font-bold text-3xl">{selectedItem}</p>
-        </div>
-      </div>
+
+
+          {
+            systemMenuItems.map(item => (
+              <CardItem
+                title={item.title}
+                icon={item.icon}
+                description={item.description}
+                key={item.title} />
+            ))
+          }
+
+        </RightContainer>
+
+      </Container>
     </div>
   );
 }

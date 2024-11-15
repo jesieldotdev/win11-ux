@@ -23,13 +23,13 @@ export default function SearchInput() {
         sx={{
           maxWidth: 400,  // Limita a largura máxima do input
           backgroundColor: '#282828',
-          borderRadius: 1,
+          borderRadius: 2,
           '& .MuiOutlinedInput-root': {
             color: color_text,
-            fontSize: '18px',
+            fontSize: '16px',
             // Cor do texto
             '& fieldset': {
-              borderColor: '#B0B0B0',  // Cor da borda
+              borderColor: 'none',  // Cor da borda
             },
             '&:hover fieldset': {
               borderColor: '#8A8A8A',  // Cor da borda ao passar o mouse

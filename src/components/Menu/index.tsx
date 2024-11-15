@@ -11,7 +11,7 @@ export const SideMenu = ({ items, handleSelectItem, selectedItem }: SideMenuProp
     const blur = 'backdrop-blur-sm bg-white/10'
     return (
         <>
-            <div className="flex flex-col gap-4 mt-4  p-4 rounded-lg">
+            <div className="flex flex-col gap-1  p-4 rounded-lg">
                 {
                     items.map(item => (
                         <div

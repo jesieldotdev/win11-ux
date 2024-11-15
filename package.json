@@ -15,11 +15,15 @@
     "@mui/material": "^6.1.7",
     "@mui/material-nextjs": "^6.1.7",
     "@mui/styled-engine-sc": "^6.1.7",
+    "autoprefixer": "^10.4.20",
+    "babel-plugin-macros": "^3.1.0",
+    "browserfs": "^1.4.3",
     "lucide": "^0.456.0",
     "lucide-react": "^0.456.0",
     "next": "^15.0.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "twin.macro": "^3.4.1"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -27,8 +31,8 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
     "typescript": "^5"
   }
 }
