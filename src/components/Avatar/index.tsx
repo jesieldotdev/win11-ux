@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import { Typography } from '@mui/material';
 
 export default function SizeAvatars() {
     return (
@@ -14,7 +13,7 @@ export default function SizeAvatars() {
             />
             <div>
                 <p className='font-semibold text-lg'>Jesiel Gomes</p>
-                <p className='font-normal text-sm text-zinc-200'>jesiel364@gmail.com</p>
+                <p className='font-normal text-sm text-zinc-400'>jesiel364@gmail.com</p>
             </div>
 
         </Stack>

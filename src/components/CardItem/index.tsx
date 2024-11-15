@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronRight, LaptopMinimalIcon, LucideIcon } from "lucide-react"
+import {  ChevronRight, LucideIcon } from "lucide-react"
 
 interface CardItemProps {
     title: string

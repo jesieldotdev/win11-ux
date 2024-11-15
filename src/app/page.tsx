@@ -4,7 +4,6 @@ import SizeAvatars from "@/components/Avatar";
 import { HeaderWindow } from "@/components/Header";
 import { SideMenu } from "@/components/Menu";
 import SearchInput from "@/components/SearchInput";
-import styled from "@emotion/styled";
 
 import { User, AppWindow, Bluetooth, Brush, Gamepad2, Globe2, House, LayoutGrid, LucideIcon, Wifi, LaptopMinimal, Volume2, Bell, Power, HardDrive, } from "lucide-react";
 import React from "react";
