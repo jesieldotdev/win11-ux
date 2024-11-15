@@ -1,11 +1,8 @@
 "use client"
 import styled from "@emotion/styled"
 import { IconButton } from "@mui/material"
-import { ArrowLeft, Icon, Minimize2, Minus, X } from "lucide-react"
+import { ArrowLeft, Minimize2, Minus, X } from "lucide-react"
 
-interface HeaderWindowProps {
-
-}
 
 const Button = styled(IconButton)`
     color: #ffffff;

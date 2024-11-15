@@ -4,10 +4,8 @@ import SizeAvatars from "@/components/Avatar";
 import { HeaderWindow } from "@/components/Header";
 import { SideMenu } from "@/components/Menu";
 import SearchInput from "@/components/SearchInput";
-import { IconButton } from "@mui/material";
 
-import { User, AppWindow, ArrowLeft, Bluetooth, Brush, Gamepad2, Globe, Globe2, House, LayoutGrid, LucideIcon, Minimize2, Minus, Wifi, X } from "lucide-react";
-import Image from "next/image";
+import { User, AppWindow, Bluetooth, Brush, Gamepad2, Globe2, House, LayoutGrid, LucideIcon, Wifi,  } from "lucide-react";
 import React from "react";
 
 export interface MenuItemsProps {
