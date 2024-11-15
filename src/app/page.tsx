@@ -5,7 +5,7 @@ import { HeaderWindow } from "@/components/Header";
 import { SideMenu } from "@/components/Menu";
 import SearchInput from "@/components/SearchInput";
 
-import { User, AppWindow, Bluetooth, Brush, Gamepad2, Globe2, House, LayoutGrid, LucideIcon, Wifi,  } from "lucide-react";
+import { User, AppWindow, Bluetooth, Brush, Gamepad2, Globe2, House, LayoutGrid, LucideIcon, Wifi, } from "lucide-react";
 import React from "react";
 
 export interface MenuItemsProps {
@@ -65,7 +65,16 @@ export default function Home() {
   return (
     <div>
       <HeaderWindow />
-      <div className="flex min-w-full h-screen p-6 gap-6 flex-col md:flex-row">
+      <div
+        style={{
+          backgroundImage: 'url(https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          backgroundBlendMode: 'overlay',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)' // Overlay para escurecer a imagem
+        }}
+        className="flex min-w-full h-screen p-6 gap-6 flex-col md:flex-row">
         <div className="w-full md:w-1/4 gap-6 flex flex-col">
           <SizeAvatars />
           <SearchInput />
